@@ -14,7 +14,7 @@ public class ClientePrimitivoUDP {
 
             /* CONFIGURACION */
             int port = 2000;
-            InetAddress destino =InetAddress.getByName(host)
+            InetAddress destino =InetAddress.getByName("127.0.0.1");
 
             /* FLUJO DE SALIDA DEL LADO DEL CLIENTE */
             DatagramSocket clienteSocket = new DatagramSocket();
@@ -24,9 +24,9 @@ public class ClientePrimitivoUDP {
             /* ENVIAMOS DATOS EN EL MISMO ORDEN QUE SE RECIBEN */
             dataSalida.writeInt(4);
             dataSalida.flush();
-            dataSalida.writeInt(4.1f);
+            dataSalida.writeFloat(4.1f);
             dataSalida.flush();
-            dataSalida.writeInt(72);
+            dataSalida.writeLong(72);
             dataSalida.flush();
 
             byte[] b = arregloSalida.toByteArray();
