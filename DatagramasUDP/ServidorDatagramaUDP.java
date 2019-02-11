@@ -13,6 +13,7 @@ public class ServidorDatagramaUDP {
             System.out.println("Servidor iniciado...");
 
             while (true) {
+                
                 /* SOPORTA HASTA UN ARREGLO DE 2000 BYTES */
                 DatagramPacket packet = new DatagramPacket(new byte[2000], 2000);
 
