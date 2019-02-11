@@ -27,10 +27,10 @@ public class ClienteDatagramaUDP {
             int port = 2000;
 
             /* CREO EL PAQUETE, Y LO ENVIO CON EL SOCKET */
-            DatagramPacket packet = new DatagramPacket(b,b.length, InetAddress.getByName(destino), port);
+            DatagramPacket packet = new DatagramPacket(b, b.length, InetAddress.getByName(destino), port);
             clienteSocket.send(packet);
             clienteSocket.close();
-            
+
         } catch (Exception e) {
             e.printStackTrace();
         }
