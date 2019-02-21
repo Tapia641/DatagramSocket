@@ -3,7 +3,7 @@ import java.net.InetAddress;
 import java.net.MulticastSocket;
 import java.net.UnknownHostException;
 
-public class ClienteMulticastB {
+public class ClienteMulticastB_Escucha {
     public static void main(String[] args) {
         iniciarCliente();
     }
@@ -53,18 +53,6 @@ public class ClienteMulticastB {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                
-                /* ----------------COMENZAMOS A ENVIAR UNA RESPUESTA---------------- */
-                /* SERVIDOR CON UN PUERTO DIFERENTE */
-
-                String respuesta = "Hola chicos, soy un cliente C:";
-                byte[] b = respuesta.getBytes();
-                DatagramPacket paqueteRespuesta = new DatagramPacket(b, b.length, grupo, 9999);
-
-                /* MANDANDO SALUDO */
-                clienteSocket.send(paqueteRespuesta);
-                System.out.println("Mensaje enviado: " + respuesta + ", con TTL: " + clienteSocket.getTimeToLive());
-
             }
         } catch (Exception e) {
             e.printStackTrace();
