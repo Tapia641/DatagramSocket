@@ -53,6 +53,18 @@ public class ClienteMulticastB_Escucha {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+                
+                /* ----------------COMENZAMOS A ENVIAR UNA RESPUESTA---------------- */
+                /* SERVIDOR CON UN PUERTO DIFERENTE */
+
+                String respuesta = "Hola chicos, soy el cliente 2";
+                byte[] b = respuesta.getBytes();
+                DatagramPacket paqueteRespuesta = new DatagramPacket(b, b.length, grupo, 9999);
+
+                /* MANDANDO SALUDO */
+                clienteSocket.send(paqueteRespuesta);
+                System.out.println("Mensaje enviado: " + respuesta + ", con TTL: " + clienteSocket.getTimeToLive());
+
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -57,7 +57,7 @@ public class ClienteMulticastB {
                 /* ----------------COMENZAMOS A ENVIAR UNA RESPUESTA---------------- */
                 /* SERVIDOR CON UN PUERTO DIFERENTE */
 
-                String respuesta = "Hola chicos, soy un cliente C:";
+                String respuesta = "Hola chicos, soy el cliente 1";
                 byte[] b = respuesta.getBytes();
                 DatagramPacket paqueteRespuesta = new DatagramPacket(b, b.length, grupo, 9999);
 

@@ -29,6 +29,7 @@ public class ServidorMulticastB {
             while (true) {
 
                 /* ----------------COMENZAMOS A ENVIAR MENSAJE---------------- */
+
                 /* SERVIDOR CON UN PUERTO DIFERENTE */
                 DatagramPacket paqueteMensaje = new DatagramPacket(b, b.length, grupo, 9999);
 
@@ -41,18 +42,6 @@ public class ServidorMulticastB {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                /* ----------------COMENZAMOS A RECIBIR LA RESPUESTA---------- */
-                /*
-                 * /* OBTENIENDO LAS RESPUESTAS DatagramPacket paqueteRespuesta = new
-                 * DatagramPacket(new byte[10], 10); servidorSocket.receive(paqueteRespuesta);
-                 * 
-                 * /* LO TRANSFORMAMOS A UNA CADENA String respuesta = new
-                 * String(paqueteRespuesta.getData()); System.out.println("Datagrama recibido: "
-                 * + respuesta);
-                 * 
-                 * /* DATOS DEL PAQUETE RECIBIDO System.out.println( "Servidor descubierto " +
-                 * paqueteRespuesta.getAddress() + ":" + paqueteRespuesta.getPort());
-                 */
             }
         } catch (Exception e) {
             e.printStackTrace();
