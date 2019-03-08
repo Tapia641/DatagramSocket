@@ -5,10 +5,10 @@ import java.net.UnknownHostException;
 
 public class ServidorMulticastB {
     public static void main(String[] args) {
-        iniciarCliente();
+        iniciarServidor();
     }
 
-    public static void iniciarCliente() {
+    public static void iniciarServidor() {
 
         /* CREAMOS EL GRUPO */
         InetAddress grupo = null;
